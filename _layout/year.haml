@@ -1,0 +1,5 @@
+#album
+  %h1= title
+  -images.each do |image| 
+    %a{:href=>image.medium, :rel=>"lightbox-album"}
+      %img{:src=>image.small}

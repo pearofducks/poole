@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title advancedpants photographs
+    %link{:href => "/css/style.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "/css/mobilestyle.css", :rel => "stylesheet", :type => "text/css", :media => "only screen and (max-device-width: 480px)"}
+    %link{:href => "/css/mobilestyle.css", :rel => "stylesheet", :type =>"text/css", :media => "only screen and (max-device-width: 1080px)"}
+    %link{:href => "/css/slimbox2.css", :rel => "stylesheet", :type =>"text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=PT+Sans+Narrow:regular,bold", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"}
+    %script{:src => "/js/slimbox2.js"}
+    %script{:src => "/m/?js", :type => "text/javascript"}
+  %body
+  #left
+    %a{:href=>"/"}
+      %img.header{:src=>"/img/daveshoots.png"}
+    %ul.footer
+      %li
+        %a{:href=>"http://blog.pearofducks.com"}
+          %img{:src=>"/img/blog.png", :alt=>"dave_blog"}
+      %li
+        %a{:href=>"http://david.honneffer.com"}
+          %img{:src=>"/img/work.png", :alt=>"dave_work"}
+  #right
+    =yield

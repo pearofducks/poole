@@ -1,0 +1,122 @@
+html, body, div, h1, h2, p, ul, li, img, a {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  min-width: 720px;
+  background-color: #eee;
+}
+
+#left {
+  height: 150px;
+  width: 100%;
+  background-color: #32407f;
+  min-width: 180px;
+  box-shadow:0px 0px 10px #000000;
+  -moz-box-shadow:0px 0px 10px #000000;
+  -webkit-box-shadow:0px 0px 10px #000000;
+	.header {
+	  position: absolute;
+    top: 0px;
+    left: 21px;
+	}
+	.footer {
+	  position: absolute;
+    top: 92px;
+    right: 21px;
+    list-style-type: none;
+    text-align: right;
+  	li {
+    	display: inline;
+      padding-left: 42px;
+      height: 42px;
+  	}
+	}
+}
+
+#right {
+	width: 90%;
+  margin-top: 171px;
+  margin-left: auto;
+  margin-right: auto;
+	color: #444;
+	background-color: #eee;
+	hr {
+	  border: 1px dashed #888;  
+	  margin-top: 2em;
+	  margin-bottom: 1em;
+	}
+  h1 {
+    font-family: 'PT Sans Narrow', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  	font-size: 2.5em;
+  	line-height: 1.5em;
+  	padding-top: 5%;
+  	text-shadow: 0 1px 0 white;
+  	font-weight: bold;
+  	a {
+  	  color: #444;
+  	  &:visited {
+  	    color: #444;
+  	  }
+  	}
+  }
+  h2 {
+    font-family: 'PT Sans Narrow', 'Helvetica Neue', Helvetica, arial, sans-serif;
+  	font-size: 1.75em;
+  	line-height: 1.5em;
+  	font-weight: normal;
+  	color: #666;
+  	&.more {
+  	  text-align: right;
+  	  padding-top: 0.5em;
+  	}
+  }
+  p, li {
+    font-family: 'PT Serif', 'Times New Roman', serif;
+  	font-size: 1.15em;
+  	line-height: 1.75em;
+  }
+  p {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+  }
+  ul {
+    padding-left: 2em;
+  }
+  a {
+    text-decoration: none;
+    color: #666;
+    &:visited {
+      color: #666;
+    }
+    &:hover {
+      color: #000;
+    }
+    &.more {
+      width: inherit;
+      text-transform: uppercase;
+    }
+  }
+  .text {
+    display: block;
+    width: 100%;
+  }
+  #footer {
+    text-transform: uppercase;
+    width: 100%;
+    .lalign {
+      float: left;
+    }
+    .ralign {
+      text-align: right;
+    }
+  }
+  #footer:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+  }
+}

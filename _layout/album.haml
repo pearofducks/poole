@@ -1,0 +1,9 @@
+%h2
+  %a.back{:href=>"/"}back
+#album
+  %h1= title
+  %hr
+  -images.each do |image| 
+    %a{:href=>image.large, :rel=>"lightbox-album", :title=>image.descript}
+      %img.album{:src=>image.medium,:height=>150,:width=>150}
+  %hr

@@ -1,0 +1,7 @@
+.DS_Store
+*.jpg
+_site/**
+_site
+m/
+pixel
+voxel
