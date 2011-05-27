@@ -1,10 +1,13 @@
 #index
-  %h1 Photo Albums!
+  %h1.index {photo albums}
   -folders.each do |folder|
     %hr
-    %h2.index
-      %a{:href=>"#{folder.folderbase}/#{folder.name}.html"}= folder.name
-    -folder.images.all.sort_by{rand}[0..6].each do |image|
-      %a{:href=>"#{folder.folderbase}/#{folder.name}.html"}
-        %img.index{:src=>image.small,:height=>50,:width=>50}
+    .folder
+      %h2.index
+        %a{:href=>"#{folder.folderbase}/#{folder.name}.html"}= folder.name
+      %ul
+        -folder.images.all.sort_by{rand}[0..6].each do |image|
+          %li
+            %a{:href=>"#{folder.folderbase}/#{folder.name}.html"}
+              %img.index{:src=>image.small,:height=>50,:width=>50}
   %hr

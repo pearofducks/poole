@@ -17,17 +17,16 @@ thumbbase = "http://voxel.advancedpants.com"
 DataMapper.setup(:default, "sqlite3://#{fileroot}/datapoole.db")
 DataMapper.auto_upgrade!
 #=====grab and go=====
-
 #EDIT THIS FOR 1.9 HASH STYLE
 site = Site.first_or_create(
-  :fileroot=>fileroot,
-  :sitebase=>sitebase,
-  :thumbroot=>thumbroot,
-  :imageroot=>imageroot,
-  :yearbase=>yearbase,
-  :solobase=>solobase,
-  :imagebase=>imagebase,
-  :thumbbase=>thumbbase
+  fileroot: fileroot,
+  sitebase: sitebase,
+  thumbroot: thumbroot,
+  imageroot: imageroot,
+  yearbase: yearbase,
+  solobase: solobase,
+  imagebase: imagebase,
+  thumbbase: thumbbase
 )
 site.update_site
 Generator.generate site

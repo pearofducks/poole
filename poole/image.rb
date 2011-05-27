@@ -16,7 +16,7 @@ class Site
     belongs_to :folder
 
     def update_image
-      self.update(:seen => true)
+      self.update seen: true
       in_path = "#{folder.path}/#{name}"
       check_page_and_date in_path
       check_and_make_thumbs in_path
@@ -78,7 +78,7 @@ class Site
       thumb = QuickMagick::Image.read(in_path).first
       puts "Finding year for: #{name}"
       date = thumb.get_date
-      self.update(:date=>date,:year=>date.year)
+      self.update date: date, year: date.year
     end
 
     def path_plus_tag thumb_root_path,name,tag
